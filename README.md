@@ -19,8 +19,7 @@ El sistema se divide en dos bloques principales:
 1. **Acceso de Radio (Nativo/SDR):** USRP X310 + srsRAN.
 2. **Core de Red & IMS (Docker):** Contenedores gestionando el control y datos.
 
-![Arquitectura GuallyTel](https://github.com/tu-usuario/tu-repo/blob/main/images/arquitectura.png)
-*(Asegúrate de subir la "Figura 1" de tu informe a la carpeta `images/` de tu repositorio)*
+![Arquitectura de la red](docs/img/arquitectura.png)
 
 **Componentes Clave:**
 * **Core:** Open5GS (MME, HSS, SGW, PGW, PCRF).
@@ -40,7 +39,7 @@ El sistema se divide en dos bloques principales:
 | **SDR** | **Ettus USRP X310** (Conexión 1GbE/10GbE) | Interfaz de radio LTE (eNodeB). |
 | **Tarjetas SIM**| **Oyeitimes** USIM Programables (LTE/VoLTE) | Autenticación de usuarios. |
 | **Programador**| Lector Smart Card SCR35xx USB | Personalización de SIMs. |
-| **UE** | Samsung Galaxy S21+ / Xiaomi | Dispositivos de usuario final. |
+| **UE** | Samsung Galaxy S24 ULTRA/ Poco F7 | Dispositivos de usuario final. |
 
 ---
 
