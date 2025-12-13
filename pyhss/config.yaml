@@ -1,0 +1,106 @@
+## HSS Parameters
+hss:
+  transport: "TCP"
+
+  bind_ip: ["172.22.0.18"]
+  bind_port: 3868
+
+  OriginHost: "hss.ims.mnc001.mcc001.3gppnetwork.org"
+  OriginRealm: "ims.mnc001.mcc001.3gppnetwork.org"
+  ProductName: "pyHSS"
+
+  site_name: "Test Site"
+
+  MCC: "001"
+  MNC: "01"
+
+  SLh_enabled: False
+  test_sub_imsi: '001021234567890'
+
+  client_socket_timeout: 120
+  diameter_request_timeout: 3
+  active_diameter_peers_timeout: 10
+
+  lock_provisioning: False
+  provisioning_key: "hss"
+
+  CancelLocationRequest_Enabled: False
+  Insert_Subscriber_Data_Force: False
+
+  Default_iFC: 'INSTALL_PREFIX/default_ifc.xml'
+  Default_Sh_UserData: 'INSTALL_PREFIX/default_sh_user_data.xml'
+
+  scscf_pool:
+    - 'sip:scscf.ims.mnc001.mcc001.3gppnetwork.org:6060'
+
+  roaming:
+    outbound:
+      allow_undefined_networks: True
+
+  sctp:
+    rtoMax: 5000
+    rtoMin: 500
+    rtoInitial: 1000
+
+api:
+  page_size: 200
+  enable_insecure_auc: True
+
+benchmarking:
+  enabled: True
+  reporting_interval: 3600
+
+eir:
+  imsi_imei_logging: True
+  no_match_response: 2
+  store_offnet_imsi: False
+  simSwapNotification: False
+
+logging:
+  level: INFO
+  logfiles:
+    hss_logging_file: INSTALL_PREFIX/log/hss.log
+    diameter_logging_file: INSTALL_PREFIX/log/diameter.log
+    geored_logging_file: INSTALL_PREFIX/log/geored.log
+    metric_logging_file: INSTALL_PREFIX/log/metrics.log
+  log_to_terminal: True
+  sqlalchemy_sql_echo: True
+  sqlalchemy_pool_recycle: 15
+  sqlalchemy_pool_size: 30
+  sqlalchemy_max_overflow: 0
+
+database:
+  db_type: mysql
+  server: MYSQL_IP
+  username: pyhss
+  password: ims_db_pass
+  database: ims_hss_db
+  readCacheEnabled: True
+  readCacheInterval: 60
+
+webhooks:
+  enabled: False
+  endpoints:
+    - 'http://127.0.0.1:8181'
+
+geored:
+  enabled: False
+  sync_actions: ['HSS', 'IMS', 'PCRF', 'EIR']
+  sync_endpoints:
+    - 'http://hss01.mnc001.mcc001.3gppnetwork.org:8080'
+    - 'http://hss02.mnc001.mcc001.3gppnetwork.org:8080'
+
+redis:
+  connectionType: "tcp"
+  unixSocketPath: '/var/run/redis/redis-server.sock'
+  host: 127.0.0.1
+  port: 6379
+
+prometheus:
+  enabled: False
+  port: 8081
+  async_subscriber_count: False
+
+snmp:
+  port: 1161
+  listen_address: 127.0.0.1

@@ -1,0 +1,33 @@
+version: '3'
+services:
+  srsenb:
+    image: docker_srslte
+    hostname: srsenb
+    restart: unless-stopped
+    container_name: srsenb
+    stdin_open: true
+    tty: true
+    privileged: true
+    networks:
+      docker_open5gs_default:
+        ipv4_address: ${SRS_ENB_IP}     # ← aquí la IP fija 172.22.0.22
+    volumes:
+      - /dev/serial:/dev/serial:ro
+      - /dev/bus/usb:/dev/bus/usb:ro
+      - ./srslte/enb.conf:/etc/srsran/enb.conf
+      - ./srslte:/mnt/srslte
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - COMPONENT_NAME=enb
+      - UHD_IMAGES_DIR=/usr/local/share/uhd/images
+      - LD_LIBRARY_PATH=/srsGUI/build/src:/usr/local/lib:/usr/lib
+    devices:
+      - "/dev/bus"
+    expose:
+      - "36412/sctp"
+      - "2152/udp"
+
+networks:
+  docker_open5gs_default:
+    external: true
