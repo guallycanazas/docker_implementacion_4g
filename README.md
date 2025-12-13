@@ -19,7 +19,7 @@ El sistema se divide en dos bloques principales:
 1. **Acceso de Radio (Nativo/SDR):** USRP X310 + srsRAN.
 2. **Core de Red & IMS (Docker):** Contenedores gestionando el control y datos.
 
-![Arquitectura de la red](docs/img/arquitectura.png)
+![Arquitectura de la red](docs/img/arquitectura.jpg)
 
 **Componentes Clave:**
 * **Core:** Open5GS (MME, HSS, SGW, PGW, PCRF).
@@ -31,7 +31,7 @@ El sistema se divide en dos bloques principales:
 
 ## 🛠️ Requisitos de Hardware
 
-[cite_start]Para replicar el laboratorio, se utilizó la siguiente configuración [cite: 207-208]:
+Para replicar el laboratorio, se utilizó la siguiente configuración :
 
 | Componente | Especificación | Función |
 |------------|----------------|---------|
@@ -45,7 +45,7 @@ El sistema se divide en dos bloques principales:
 
 ## ⚙️ Configuración de Red
 
-[cite_start]Se utilizan subredes específicas para separar el tráfico de gestión de Docker del enlace físico de radio [cite: 217-218]:
+Se utilizan subredes específicas para separar el tráfico de gestión de Docker del enlace físico de radio :
 
 * **Red Docker (Bridge):** `172.22.0.0/24` (Comunicación interna EPC/IMS).
 * **Enlace Físico SDR:** `192.168.10.0/24` (Host <-> USRP).
