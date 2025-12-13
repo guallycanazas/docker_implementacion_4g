@@ -170,7 +170,7 @@ uhd_usrp_probe
 
 ## 🔧 Configuración (.env)
 
-Crea un archivo `.env` local (NO publiques secretos). Ejemplo:
+Crea un archivo `.env` local.
 
 ```bash
 cat > .env << 'EOF'
