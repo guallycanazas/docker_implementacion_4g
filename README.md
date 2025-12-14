@@ -18,8 +18,21 @@ El EPC y el subsistema IMS están contenerizados con Docker para un despliegue m
 
 ## 🤝 Comunidad y contribuciones
 
-Este proyecto se apoya en lo open-source  y en una comunidad técnica donde nadie avanza solo: compartimos configuraciones, evidencias (logs/capturas), y soluciones a problemas típicos de LTE/IMS con SDR. En pocas palabras, nos ayudamos entre todos para mejorar el despliegue, depurar errores y hacer el laboratorio más estable y reproducible.
-Comunidad (Discord): https://discord.gg/8NuQ7YNW4m
+## 🤝 Comunidad y contribuciones (Open-Source)
+
+Este proyecto se apoya en el ecosistema **open-source** y en una comunidad tipo foro donde la regla es simple: cuando algo falla (o sea, siempre), **nadie se queda solo**. Ahí se comparten configuraciones, capturas (Wireshark/tcpdump), logs, fixes y buenas prácticas para que los laboratorios **4G/5G**.
+
+La comunidad principal está en **inglés**, así que sí: a veces estás debuggeando **GTP-U** y aprendiendo vocabulario técnico al mismo tiempo. Pero compensa, porque no es un club cerrado de *Open5GS + srsRAN + Kamailio*: se discuten y comparan varias alternativas open-source:
+
+* **Core/EPC/5GC:** Open5GS, Magma , **NextEPC**, etc.
+
+* **RAN:** srsRAN, **OpenAirInterface (OAI)** y otras opciones.
+
+* **IMS/VoLTE:** Kamailio y variantes.
+
+* **SDR:** USRP, LimeSDR, Pluto+, bladeRF, y más.
+
+### 🔗💬 Discord (English community): ** https://discord.gg/8NuQ7YNW4m**
 
 ## 🏗️ Arquitectura de la Red
 
