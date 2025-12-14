@@ -1,5 +1,5 @@
 
-# 🚀 Red 4G LTE/VoLTE con Open5GS, Kamailio & srsRAN (Dockerizada) - GuallyTel
+# 🚀 Red 4G LTE/VoLTE con Open5GS, Kamailio & srsRAN con SIM OYEITIMES - GuallyTel
 
 ![Docker](https://img.shields.io/badge/Docker-25.0+-blue.svg)
 ![srsRAN](https://img.shields.io/badge/srsRAN-4G-green.svg)
@@ -8,13 +8,18 @@
 
 ## 📖 Descripción General
 
-Este proyecto ("GuallyTel") implementa una red móvil completa **4G LTE/VoLTE** utilizando herramientas de software libre y Radio Definida por Software (SDR).
+Este proyecto GuallyTel implementa un laboratorio completo 4G LTE + IMS (VoLTE-ready) usando herramientas open-source y Radio Definida por Software (SDR).
 
-A diferencia de despliegues estándar, esta arquitectura integra **Wowza Streaming Engine** para demostrar capacidades reales de **IPTV y streaming** sobre el plano de usuario LTE, además de servicios de **VoLTE y SMS**.
+Nace como un fork del repositorio de herlesupreeth, pero se diferencia en que no se queda en un despliegue “estándar”: se amplía para demostrar servicios reales sobre LTE, integrando Wowza Streaming Engine para IPTV/streaming (VOD y live) sobre el plano de usuario LTE desde el UE, además de pruebas de SMS y validación del entorno IMS.
 
-El núcleo de la red (EPC) y el subsistema IMS están contenerizados usando **Docker**, proporcionando un entorno modular y reproducible, mientras que la Red de Acceso (RAN) está impulsada por **srsRAN** conectado a un **Ettus USRP X310**.
+Para la parte de abonados, se emplean SIMs programables OYEITIMES (más económicas que alternativas como Sysmocom) para escalar pruebas con múltiples líneas y perfiles (IMSI/Ki/OPc/APN/IMS) orientados a laboratorio.
 
----
+El EPC y el subsistema IMS están contenerizados con Docker para un despliegue modular y reproducible, mientras que la RAN se implementa con srsRAN conectada a un Ettus USRP X310. La verificación se respalda con evidencia (logs y capturas con Wireshark/tcpdump) para confirmar señalización y tráfico de usuario.
+
+## 🤝 Comunidad y contribuciones
+
+Este proyecto se apoya en lo open-source  y en una comunidad técnica donde nadie avanza solo: compartimos configuraciones, evidencias (logs/capturas), y soluciones a problemas típicos de LTE/IMS con SDR. En pocas palabras, nos ayudamos entre todos para mejorar el despliegue, depurar errores y hacer el laboratorio más estable y reproducible.
+Comunidad (Discord): https://discord.gg/8NuQ7YNW4m
 
 ## 🏗️ Arquitectura de la Red
 
