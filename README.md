@@ -16,7 +16,6 @@ Para la parte de abonados, se emplean SIMs programables OYEITIMES (más económi
 
 El EPC y el subsistema IMS están contenerizados con Docker para un despliegue modular y reproducible, mientras que la RAN se implementa con srsRAN conectada a un Ettus USRP X310. La verificación se respalda con evidencia (logs y capturas con Wireshark/tcpdump) para confirmar señalización y tráfico de usuario.
 
-## 🤝 Comunidad y contribuciones
 
 ## 🤝 Comunidad y contribuciones (Open-Source)
 
@@ -32,7 +31,7 @@ La comunidad principal está en **inglés**, así que sí: a veces estás debugg
 
 * **SDR:** USRP, LimeSDR, Pluto+, bladeRF, y más.
 
-### 🔗💬 Discord (English community): ** https://discord.gg/8NuQ7YNW4m**
+#### 🔗💬 Discord (English community):  https://discord.gg/8NuQ7YNW4m
 
 ## 🏗️ Arquitectura de la Red
 
